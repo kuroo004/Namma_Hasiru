@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Namma_Hasiru" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/forest_green_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/leaf_light</item>
+        <item name="colorOnPrimaryContainer">@color/forest_green_dark</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/soil_brown</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Earthy Background -->
+        <item name="android:windowBackground">@color/earth_tan</item>
+
+        <item name="android:statusBarColor">@color/forest_green_dark</item>
+    </style>
+</resources>

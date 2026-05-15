@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/earth_tan"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sustainability Check-up"
+        android:textColor="@color/forest_green_dark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_growth_photo"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/leaf_light"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_camera" />
+
+    <Button
+        android:id="@+id/btn_take_growth_photo"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="Capture Growth Photo"
+        app:backgroundTint="@color/forest_green_primary"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Current Health Status:"
+        android:textColor="@color/soil_brown"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rg_health_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rb_sprouted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sprouted" />
+
+        <RadioButton
+            android:id="@+id/rb_growing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Growing" />
+
+        <RadioButton
+            android:id="@+id/rb_healthy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Healthy" />
+
+        <RadioButton
+            android:id="@+id/rb_died"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Died" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_update_status"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="Update Mission Status"
+        app:backgroundTint="@color/forest_green_primary" />
+
+</LinearLayout>

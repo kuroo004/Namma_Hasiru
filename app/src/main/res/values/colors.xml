@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="forest_green_primary">#2D5A27</color>
+    <color name="forest_green_dark">#1B3617</color>
+    <color name="soil_brown">#4E3B31</color>
+    <color name="earth_tan">#D2B48C</color>
+    <color name="leaf_light">#99C24D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

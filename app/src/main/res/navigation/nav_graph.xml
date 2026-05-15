@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mapFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.namma_hasiru.ui.MapFragment"
+        android:label="Tree Map"
+        tools:layout="@layout/fragment_map">
+        <action
+            android:id="@+id/action_mapFragment_to_logPlantFragment"
+            app:destination="@id/logPlantFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_treeDetailsFragment"
+            app:destination="@id/treeDetailsFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_treeListFragment"
+            app:destination="@id/treeListFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_speciesGuideFragment"
+            app:destination="@id/speciesGuideFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/logPlantFragment"
+        android:name="com.example.namma_hasiru.ui.LogPlantFragment"
+        android:label="Log New Plant"
+        tools:layout="@layout/fragment_log_plant">
+        <action
+            android:id="@+id/action_logPlantFragment_to_mapFragment"
+            app:destination="@id/mapFragment"
+            app:popUpTo="@id/mapFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/treeDetailsFragment"
+        android:name="com.example.namma_hasiru.ui.TreeDetailsFragment"
+        android:label="Tree Details"
+        tools:layout="@layout/fragment_tree_details">
+        <argument
+            android:name="treeId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_treeDetailsFragment_to_statusUpdateFragment"
+            app:destination="@id/statusUpdateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/statusUpdateFragment"
+        android:name="com.example.namma_hasiru.ui.StatusUpdateFragment"
+        android:label="Update Status"
+        tools:layout="@layout/fragment_status_update">
+        <argument
+            android:name="treeId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_statusUpdateFragment_to_treeDetailsFragment"
+            app:destination="@id/treeDetailsFragment"
+            app:popUpTo="@id/treeDetailsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/treeListFragment"
+        android:name="com.example.namma_hasiru.ui.TreeListFragment"
+        android:label="My Trees"
+        tools:layout="@layout/fragment_tree_list">
+        <action
+            android:id="@+id/action_treeListFragment_to_treeDetailsFragment"
+            app:destination="@id/treeDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/speciesGuideFragment"
+        android:name="com.example.namma_hasiru.ui.SpeciesGuideFragment"
+        android:label="Species Guide"
+        tools:layout="@layout/fragment_species_guide" />
+
+</navigation>
